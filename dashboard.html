@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NEU Library Dashboard</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #eef2f7, #dbeafe);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 480px;
+      margin: 60px 20px;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+      padding: 40px 30px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .container:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.15);
+    }
+
+    h1 {
+      color: #1e3a8a;
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    h3 {
+      color: #1e40af;
+      font-size: 20px;
+      margin: 25px 0 15px;
+    }
+
+    p {
+      color: #334155;
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+
+    select {
+      width: 100%;
+      padding: 14px 16px;
+      border-radius: 12px;
+      border: 1px solid #cbd5e1;
+      font-size: 16px;
+      transition: all 0.3s;
+      background-color: #f8fafc;
+      margin-bottom: 30px;
+      cursor: pointer;
+    }
+
+    select:focus {
+      border-color: #3b82f6;
+      outline: none;
+      box-shadow: 0 0 10px rgba(59,130,246,0.2);
+    }
+
+    .btn-group {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    button {
+      flex: 1 1 48%;
+      padding: 14px 0;
+      border: none;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+      color: #fff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    #checkInBtn {
+      background: linear-gradient(45deg, #3b82f6, #60a5fa);
+    }
+
+    #checkOutBtn {
+      background: linear-gradient(45deg, #ef4444, #f87171);
+    }
+
+    button:hover {
+      opacity: 0.95;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    }
+
+    @media screen and (max-width: 500px) {
+      .container {
+        padding: 30px 20px;
+      }
+      button {
+        flex: 1 1 100%;
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>📖 NEU Library Dashboard</h1>
+
+  <h3>Visitor Log</h3>
+  <p>Select your reason for visiting:</p>
+  <select id="reason">
+    <option value="Reading">📚 Reading</option>
+    <option value="Research">🔬 Research</option>
+    <option value="Computer Use">💻 Computer Use</option>
+  </select>
+
+  <div class="btn-group">
+    <button id="checkInBtn">Time-In</button>
+    <button id="checkOutBtn">Log-Out</button>
+  </div>
+</div>
+
+<script type="module" src="dashboard.js"></script>
+</body>
+</html>
